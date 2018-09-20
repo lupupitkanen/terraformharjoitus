@@ -6,6 +6,14 @@ Harjoitellaan terraform infra-automaatiota Google Cloud Platformin kanssa
 gcloud auth application-default login
 ```
 
+# Projektin hakemisto
+```
+cd
+cd projects
+mkdir omaprojekti
+cd omaprojekti
+```
+
 # variables.tf tiedosto
 ```
 variable "project_name" {}

@@ -176,6 +176,29 @@ systemctl enable nginx
 systemctl start nginx
 ```
 
+# .gitignore tiedosto
+
+Kerrotaan tässä tiedotossa mitä tiedostoja git ei saa lisätä GitHubiin.
+
+```
+.terraform
+terraform.tfstate
+terraform.tfstate.backup
+```
+
+# Perusta git projekti
+
+https://github.com/new
+
+Aja komennot projektihakemistosa, huomaa oma tunnus ja valitsemasi projektin nimi!
+```
+git init
+git add .
+git commit -m "first commit"
+git remote add origin git@github.com:omanimi/omaterrademo1.git
+git push -u origin master
+```
+
 # Ympäristömuuttujat
 
 - TF_VAR_billing_account: Google Cloud Console -> Billing

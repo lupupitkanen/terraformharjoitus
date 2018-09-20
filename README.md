@@ -99,7 +99,7 @@ resource "google_compute_instance" "default" {
    "ssh-keys" = "vagrant:${file("~/.ssh/id_rsa.pub")}"
  }
 
-# metadata_startup_script = "${file("startup.sh")}"
+metadata_startup_script = "${file("startup.sh")}"
 
  service_account {
    scopes = ["userinfo-email", "compute-ro", "storage-full", "cloud-platform"]
@@ -167,6 +167,13 @@ resource "google_compute_firewall" "allow_cloudflare" {
     source_ranges = ["${data.cloudflare_ip_ranges.cloudflare.ipv4_cidr_blocks}"]
     target_tags = ["web"]
 }
+```
+
+# startup.sh tiedosto
+```
+yum -y install nginx
+systemctl enable nginx
+systemctl start nginx
 ```
 
 # Ympäristömuuttujat

@@ -116,6 +116,7 @@ output "compute_instance_nat_ip" {
 
 - TF_VAR_billing_account: Google Cloud Console -> Billing
 - TF_VAR_cloudflare_token: Cloudflare -> My Profile -> API Keys -> Global API Key
+- TF_VAR_cloudflare_zone: Oma domain nimesi, esim. sinundomain.online
 
 ```
 export TF_VAR_billing_account=

@@ -135,3 +135,25 @@ terraform init
 terraform plan
 terraform apply
 ```
+
+# Lisäkomentoja
+```
+# Katso outputit
+terraform output
+
+# Kirjaudu palvelimelle
+ssh <ip-osoite>
+
+# Vaihda palvelimen tyyppi/koko
+export TF_VAR_machine_type=n1-standard-2
+terraform plan
+terraform apply
+
+# POISTA KAIKKI
+terraform destroy
+
+# Luo uudlleen puhtaalta pöydältä
+
+terraform plan
+terraform apply
+```

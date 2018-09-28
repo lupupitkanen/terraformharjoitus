@@ -78,6 +78,7 @@ resource "google_compute_instance" "default" {
  zone = "${var.region}-a"
  allow_stopping_for_update = "true"
  name = "${var.project_name}-web"
+ tags = ["web"]
  machine_type = "${var.machine_type}"
 
  boot_disk {
